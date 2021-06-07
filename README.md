@@ -17,13 +17,7 @@ Use [Gitpod][] for remote development:
 
 ### Local
 
-For local (non-Docker) development, first install [pyenv][] and execute:
-
-```sh
-pyenv install $(pyenv local)
-```
-
-Then, execute:
+For local (non-Docker) development, execute:
 
 ```sh
 python3 -m venv venv
@@ -47,6 +41,5 @@ You can read more at [OpenSAFELY.org][].
 [Gitpod]: https://www.gitpod.io/
 [OpenSAFELY documentation]:https://docs.opensafely.org
 [OpenSAFELY.org]: https://opensafely.org
-[pyenv]: https://github.com/pyenv/pyenv
 [released outputs folder]: released_outputs
 [study definition]: analysis/study_definition.py
