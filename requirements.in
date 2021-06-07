@@ -1,0 +1,12 @@
+altair
+black
+flake8
+ipython
+isort
+jupyterlab
+jupyterlab-spellchecker
+matplotlib
+opensafely
+pandas
+pip-tools
+pyarrow

@@ -1,0 +1,26 @@
+version: '3.0'
+
+expectations:
+  population_size: 1000
+
+actions:
+
+  generate_cohort:
+    run: cohortextractor:latest generate_cohort --output-format feather --study-definition study_definition --index-date-range "2019-01-01 to 2021-04-30 by month"
+    outputs:
+      highly_sensitive:
+        cohort: output/input_*.feather
+
+  generate_measures:
+    run: cohortextractor:latest generate_measures --study-definition study_definition
+    needs: [generate_cohort]
+    outputs:
+      moderately_sensitive:
+        measures: output/measure_*.csv
+
+  generate_deciles_charts:
+    run: python:latest python analysis/generate_deciles_charts.py
+    needs: [generate_measures]
+    outputs:
+      moderately_sensitive:
+        figures: output/*.vl.json
