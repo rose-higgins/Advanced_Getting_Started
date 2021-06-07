@@ -6,7 +6,6 @@ isort
 jupyterlab
 jupyterlab-spellchecker
 matplotlib
-opensafely
 pandas
 pip-tools
 pyarrow
