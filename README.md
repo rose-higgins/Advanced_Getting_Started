@@ -8,7 +8,14 @@ This study is a step-by-step walk-through of the OpenSAFELY framework, using the
 * If you are interested in how we defined our codelists, then take look in the [codelists folder][].
 * Developers and epidemiologists interested in the framework should review the [OpenSAFELY documentation][].
 
-## Local Development
+## Development
+
+### Remote
+
+Use [Gitpod][] for remote development:
+<https://gitpod.io/#https://github.com/opensafely/sro-measures-demo>.
+
+### Local
 
 For local (non-Docker) development, first install [pyenv][] and execute:
 
@@ -34,6 +41,7 @@ OpenSAFELY is a secure analytics platform for electronic health records research
 You can read more at [OpenSAFELY.org][].
 
 [codelists folder]: codelists
+[Gitpod]: https://www.gitpod.io/
 [OpenSAFELY documentation]:https://docs.opensafely.org
 [OpenSAFELY.org]: https://opensafely.org
 [pyenv]: https://github.com/pyenv/pyenv
