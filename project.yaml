@@ -6,10 +6,10 @@ expectations:
 actions:
 
   generate_cohort:
-    run: cohortextractor:latest generate_cohort --output-format feather --study-definition study_definition --index-date-range "2019-01-01 to 2021-04-30 by month"
+    run: cohortextractor:latest generate_cohort --output-format csv --study-definition study_definition --index-date-range "2019-01-01 to 2021-04-30 by month"
     outputs:
       highly_sensitive:
-        cohort: output/input_*.feather
+        cohort: output/input_*.csv
 
   generate_measures:
     run: cohortextractor:latest generate_measures --study-definition study_definition
