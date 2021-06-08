@@ -1,6 +1,8 @@
 # SRO Measures Demo
 
 This study is a step-by-step walk-through of the OpenSAFELY framework, using the Service Restoration Observatory (SRO) Measures study as a guide.
+You can walk through the [walk-through][] yourself.
+Alternatively:
 
 * Released outputs are in the [released outputs folder][].
 * If you are interested in how we defined our variables, then take a look at the [study definition][];
@@ -43,3 +45,4 @@ You can read more at [OpenSAFELY.org][].
 [OpenSAFELY.org]: https://opensafely.org
 [released outputs folder]: released_outputs
 [study definition]: analysis/study_definition.py
+[walk-through]: docs/walkthrough.md
