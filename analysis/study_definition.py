@@ -1,6 +1,6 @@
 from cohortextractor import Measure, StudyDefinition, patients
 
-from codelists import sbp_codelist
+from codelists import cholesterol_codelist, sbp_codelist  # noqa
 
 # We use these dates when we define the study population. Rather than type them
 # "longhand" each time, we type them "shorthand", which reduces the risk of making

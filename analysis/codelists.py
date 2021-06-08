@@ -5,3 +5,9 @@ sbp_codelist = codelist_from_csv(
     system="snomed",
     column="code",
 )
+
+cholesterol_codelist = codelist_from_csv(
+    "codelists/opensafely-cholesterol-tests.csv",
+    system="snomed",
+    column="code",
+)
