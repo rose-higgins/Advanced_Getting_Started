@@ -1,9 +1,9 @@
-import json
 import re
 
 import numpy
 import pandas
 import utils
+from ebmdatalab import charts
 from pandas import Series
 
 MEASURE_FNAME_REGEX = re.compile(r"measure_(?P<id>\w+)\.csv")
@@ -38,72 +38,26 @@ def drop_rows(measures_table):
     return measures_table[measures_table[measures_table.attrs["denominator"]] > 0]
 
 
-def get_deciles_table(measures_table):
-    by = ["date"] + measures_table.attrs["group_by"][1:]
-    deciles_table = measures_table.groupby(by)["value"].quantile(DECILES).reset_index()
-    # `measures_table.attrs` isn't persisted.
-    deciles_table.attrs = measures_table.attrs.copy()
-    return deciles_table
+def write_deciles_chart(measures_table):
+    facets = measures_table.attrs["group_by"][1:]
+    assert not facets, "Faceted deciles charts are not supported"  # FIXME
 
-
-def _to_records(deciles_table):
-    _deciles_table = deciles_table.copy()
-    _deciles_table["date"] = _deciles_table["date"].dt.strftime("%Y-%m-%dT00:00:00")
-    return _deciles_table.to_dict("records")
-
-
-def get_deciles_chart(deciles_table):
-    chart = {
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "usermeta": deciles_table.attrs.copy(),
-        "mark": "line",
-        "encoding": {
-            "x": {
-                "type": "temporal",
-                "field": "date",
-            },
-            "y": {
-                "type": "quantitative",
-                "field": "value",
-            },
-            "detail": {
-                "type": "ordinal",
-                "field": "deciles",
-            },
-        },
-    }
-
-    facets = deciles_table.columns[1:-2]
-    if not facets.empty:
-        assert len(facets) == 1, "We cannot facet by more than one column"  # FIXME
-        chart["facet"] = {
-            "row": {
-                "field": f"{facets[0]}",
-                "type": "nominal",
-            },
-        }
-
-    chart["data"] = {
-        "values": _to_records(deciles_table),
-    }
-
-    return chart
-
-
-def write_deciles_chart(deciles_chart):
-    id_ = deciles_chart["usermeta"]["id"]
-    fname = f"deciles_chart_{id_}.vl.json"
+    plt = charts.deciles_chart(
+        measures_table,
+        "date",
+        "value",
+        show_outer_percentiles=False,
+    )
+    id_ = measures_table.attrs["id"]
+    fname = f"deciles_chart_{id_}.png"
     fpath = utils.OUTPUT_DIR / fname
-    with open(fpath, "w", encoding="utf8") as f:
-        json.dump(deciles_chart, f, indent=2)
+    plt.savefig(fpath, dpi=300, bbox_inches="tight")
 
 
 def main():
     for measures_table in get_measures_tables():
         measures_table = drop_rows(measures_table)
-        deciles_table = get_deciles_table(measures_table)
-        deciles_chart = get_deciles_chart(deciles_table)
-        write_deciles_chart(deciles_chart)
+        write_deciles_chart(measures_table)
 
 
 if __name__ == "__main__":

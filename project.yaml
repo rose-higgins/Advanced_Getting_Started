@@ -23,4 +23,4 @@ actions:
     needs: [generate_measures]
     outputs:
       moderately_sensitive:
-        figures: output/*.vl.json
+        figures: output/*.png
