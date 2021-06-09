@@ -1,11 +1,9 @@
 ---
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Install requirements
+  - name: Install opensafely cli tool
     # runs when workspace initially created, and as pre-build
     init: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
         pip install opensafely
         opensafely pull --project project.yaml
   - name: Update opensafely
