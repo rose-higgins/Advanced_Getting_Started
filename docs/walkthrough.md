@@ -110,7 +110,31 @@ Inspect the new deciles chart file:
 
 ## Requesting a code review
 
-TODO
+Check that Gitpod has the correct GitHub permissions:
+
+* Visit <https://gitpod.io/integrations>
+* Click *Edit Permissions* under GitHub
+* Click each permission's checkbox and click *Update Permissions*
+* Click *Authorize gitpod-io*
+
+Branch, commit, and publish:
+
+* Click *Source Control*
+* Create a new branch called `add-cholesterol-measure`
+* Inspect the changes to *analysis/study_definition.py*, *codelists.json*, and *codelists/codelists.txt*
+* Stage the changes 
+* Add "Added cholesterol measure" as a commit message
+* Click *Publish Changes*
+
+Create a pull request:
+
+* Click *Create Pull Request*
+* Add a description (use the given title)
+* Click *Create*
+* Visit <https://github.com/opensafely/sro-measures-demo/pulls>
+* Assign a reviewer
+
+The reviewer inspects the changes, approves the pull request, and merges the changes into the `main` branch.
 
 ## Running on the job server
 
