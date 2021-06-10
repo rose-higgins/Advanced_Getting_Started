@@ -13,7 +13,7 @@ Check that Gitpod has the correct GitHub permissions:
 
 Start a new Gitpod workspace:
 
-* <https://gitpod.io/#https://github.com/opensafely/sro-measures-demo>
+* Visit <https://gitpod.io/#https://github.com/opensafely/sro-measures-demo>
 
 Generate expected, or "dummy", data:
 
@@ -59,7 +59,7 @@ Click the deciles chart file:
 
 Inspect a codelist on [OpenCodelists][]:
 
-* <https://www.opencodelists.org/codelist/opensafely/cholesterol-tests/09896c09/>
+* Visit <https://www.opencodelists.org/codelist/opensafely/cholesterol-tests/09896c09/>
 
 Click *codelists/codelists.txt*:
 
