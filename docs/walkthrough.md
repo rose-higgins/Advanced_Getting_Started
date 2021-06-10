@@ -1,5 +1,14 @@
 # Walk-through
 
+## Preliminaries
+
+Check that Gitpod has the correct GitHub permissions:
+
+* Visit <https://gitpod.io/integrations>
+* For the GitHub entry, click the ellipsis, and click *Edit Permissions*
+* Click each permission's checkbox and click *Update Permissions*
+* Click *Authorize gitpod-io*
+
 ## Getting started
 
 Start a new Gitpod workspace:
@@ -109,13 +118,6 @@ Inspect the new deciles chart file:
 * This action is flexible; it will make a deciles chart from each measures file it finds in the *output* directory
 
 ## Requesting a code review
-
-Check that Gitpod has the correct GitHub permissions:
-
-* Visit <https://gitpod.io/integrations>
-* Click *Edit Permissions* under GitHub
-* Click each permission's checkbox and click *Update Permissions*
-* Click *Authorize gitpod-io*
 
 Branch, commit, and publish:
 
