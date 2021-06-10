@@ -121,16 +121,20 @@ Click the new deciles chart file:
 
 Branch from `main` and commit:
 
-* Click *Source Control*
-* Create a new branch called `add-cholesterol-measure`
-* Inspect the changes to *analysis/study_definition.py*, *codelists.json*, and *codelists/codelists.txt*
-* Stage the changes 
-* Add "Added cholesterol measure" as a commit message
+* Click the *Source Control* icon
+* Press <kbd>f1</kbd> and search for "Create Branch"
+* Name the branch e.g. "add-cholesterol-measure"
+* Click *study_definition.py*, *codelists.json*, and *codelists.txt*
+* Inspect the changes to each file
+* Click the plus icon next to each file to stage the changes
+* Add a commit message e.g. "Added cholesterol measure"
+* Press <kbd>Command Enter</kbd> to commit the changes
 
 Create a pull request:
 
-* Click *Create Pull Request*
-* Add a description (use the given title)
+* Press <kbd>f1</kbd> and search for "Crete Pull Request" (The pull request form is broken on Safari.)
+* Add a title e.g. "Added cholesterol measure"
+* Add a description e.g. "Added cholesterol covariates to the study definition and used these to generate a cholesterol measure."
 * Click *Create*
 * Visit <https://github.com/opensafely/sro-measures-demo/pulls>
 * Assign a reviewer
