@@ -132,7 +132,7 @@ Branch from `main` and commit:
 
 Create a pull request:
 
-* Press <kbd>f1</kbd> and search for "Crete Pull Request" (The pull request form is broken on Safari.)
+* Press <kbd>f1</kbd> and search for "Create Pull Request" (The pull request form is broken on Safari.)
 * Add a title e.g. "Added cholesterol measure"
 * Add a description e.g. "Added cholesterol covariates to the study definition and used these to generate a cholesterol measure."
 * Click *Create*
