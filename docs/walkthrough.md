@@ -119,14 +119,13 @@ Click the new deciles chart file:
 
 ## Requesting a code review
 
-Branch, commit, and publish:
+Branch from `main` and commit:
 
 * Click *Source Control*
 * Create a new branch called `add-cholesterol-measure`
 * Inspect the changes to *analysis/study_definition.py*, *codelists.json*, and *codelists/codelists.txt*
 * Stage the changes 
 * Add "Added cholesterol measure" as a commit message
-* Click *Publish Changes*
 
 Create a pull request:
 
