@@ -127,7 +127,7 @@ Click the new deciles chart file:
 
 Branch from `main` and commit:
 
-* Click the *Source Control* icon
+* Click the *Source Control* icon (![The Source Control icon](img/source_control.png))
 * Press <kbd>f1</kbd> and search for "Create Branch"
 * Name the branch e.g. "add-cholesterol-measure"
 * Click *study_definition.py*, *codelists.json*, and *codelists.txt*
