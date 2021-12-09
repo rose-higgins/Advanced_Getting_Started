@@ -15,6 +15,12 @@ Start a new Gitpod workspace:
 
 * Visit <https://gitpod.io/#https://github.com/opensafely/sro-measures-demo>
 
+Install `opensafely`:
+
+```sh
+pip install opensafely
+```
+
 Generate expected, or "dummy", data:
 
 * Click the *output* directory; notice that it's empty
