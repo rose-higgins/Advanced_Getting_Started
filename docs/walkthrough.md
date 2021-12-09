@@ -13,7 +13,7 @@ Check that Gitpod has the correct GitHub permissions:
 
 Start a new Gitpod workspace:
 
-* Visit <https://gitpod.io/#https://github.com/opensafely/sro-measures-demo>
+* Visit <https://gitpod.io/#https://github.com/opensafely/nhsx-demo>
 
 Install `opensafely`:
 
