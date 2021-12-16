@@ -5,6 +5,12 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/systolic-blood-pressure-qof/3572b5fb/",
       "downloaded_at": "2021-05-21 15:29:54.344609Z",
       "sha": "f2bc461e351499f4e5573a6f94e760b99979491e"
+    },
+    "opensafely-cholesterol-tests.csv": {
+      "id": "opensafely/cholesterol-tests/09896c09",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/cholesterol-tests/09896c09/",
+      "downloaded_at": "2021-12-16 09:44:36.220293Z",
+      "sha": "e5f9e7e0b44c18830aea207f001d015153a56b8e"
     }
   }
 }
